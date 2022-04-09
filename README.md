@@ -1,4 +1,4 @@
-# Next.JS
+# NextJS & YarnBerry & Tailwind
 
 _[S3와 EC2 배포의 차이점](https://devlog-h.tistory.com/m/11)_
 
