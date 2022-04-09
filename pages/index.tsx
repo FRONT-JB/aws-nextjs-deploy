@@ -8,6 +8,7 @@ const Home: NextPage = () => {
       <Text>TailWind Styled Init</Text>
       <Text>AWS Deploy</Text>
       <Sample />
+      <Sample />
     </Wrapper>
   );
 };
