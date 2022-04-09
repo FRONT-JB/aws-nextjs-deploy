@@ -150,7 +150,7 @@ module.exports = {
 2. 인덱스 문서 -> index.html
 3. 오류 문서 -> index.html
 
-**`권한`**
+**`권한 -> 버킷 정책 수정`**
 
 ```js
 {
