@@ -1,3 +1,4 @@
+import Sample from 'components/Sample';
 import type { NextPage } from 'next';
 import tw from 'tailwind-styled-components';
 
@@ -6,6 +7,7 @@ const Home: NextPage = () => {
     <Wrapper>
       <Text>TailWind Styled Init</Text>
       <Text>AWS Deploy</Text>
+      <Sample />
     </Wrapper>
   );
 };

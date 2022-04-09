@@ -97,7 +97,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/eslintrc@npm:^0.4.3":
+"@eslint/eslintrc@npm:^0.4.2":
   version: 0.4.3
   resolution: "@eslint/eslintrc@npm:0.4.3"
   dependencies:
@@ -372,13 +372,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/eslint@npm:^8":
-  version: 8.4.1
-  resolution: "@types/eslint@npm:8.4.1"
+"@types/eslint@npm:^7":
+  version: 7.29.0
+  resolution: "@types/eslint@npm:7.29.0"
   dependencies:
     "@types/estree": "*"
     "@types/json-schema": "*"
-  checksum: b5790997ee9d3820d16350192d41849b0e2448c9e93650acac672ddf502e35c0a5a25547172a9eec840a96687cd94ba1cee672cbd86640f8f4ff1b65960d2ab9
+  checksum: df13991c554954353ce8f3bb03e19da6cc71916889443d68d178d4f858b561ba4cc4a4f291c6eb9eebb7f864b12b9b9313051b3a8dfea3e513dadf3188a77bdf
   languageName: node
   linkType: hard
 
@@ -2017,12 +2017,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:<8.0.0":
-  version: 7.32.0
-  resolution: "eslint@npm:7.32.0"
+"eslint@npm:7.30.0":
+  version: 7.30.0
+  resolution: "eslint@npm:7.30.0"
   dependencies:
     "@babel/code-frame": 7.12.11
-    "@eslint/eslintrc": ^0.4.3
+    "@eslint/eslintrc": ^0.4.2
     "@humanwhocodes/config-array": ^0.5.0
     ajv: ^6.10.0
     chalk: ^4.0.0
@@ -2063,7 +2063,7 @@ __metadata:
     v8-compile-cache: ^2.0.3
   bin:
     eslint: bin/eslint.js
-  checksum: cc85af9985a3a11085c011f3d27abe8111006d34cc274291b3c4d7bea51a4e2ff6135780249becd919ba7f6d6d1ecc38a6b73dacb6a7be08d38453b344dc8d37
+  checksum: 872f90844b164dd61ec1bb949d2e33e7fbd189e0652fabe2cbbd0bdce1e4cd7ed08e72fa213795a453ae39fe24460771800608e765febb9e778deb28b9db3cc1
   languageName: node
   linkType: hard
 
@@ -3553,12 +3553,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nextjs-yarn-berry@workspace:."
   dependencies:
-    "@types/eslint": ^8
+    "@types/eslint": ^7
     "@types/node": 17.0.8
     "@types/postcss-import": ^14
     "@types/react": 17.0.38
     autoprefixer: ^10.4.2
-    eslint: <8.0.0
+    eslint: 7.30.0
     eslint-config-next: 12.0.8
     next: 12.0.4
     postcss: ^8.4.5
@@ -3568,7 +3568,6 @@ __metadata:
     tailwind-styled-components: ^2.1.1
     tailwindcss: ^3.0.15
     typescript: ^4.5.4
-    ~: "link:./src"
   languageName: unknown
   linkType: soft
 
@@ -5382,9 +5381,3 @@ __metadata:
   checksum: f77b3d8d00310def622123df93d4ee654fc6a0096182af8bd60679ddcdfb3474c56c6c7190817c84a2785648cdee9d721c0154eb45698c62176c322fb46fc700
   languageName: node
   linkType: hard
-
-"~@link:./src::locator=nextjs-yarn-berry%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "~@link:./src::locator=nextjs-yarn-berry%40workspace%3A."
-  languageName: node
-  linkType: soft
