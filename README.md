@@ -1,5 +1,11 @@
 # Next.JS
 
+_[S3와 EC2 배포의 차이점](https://devlog-h.tistory.com/m/11)_
+
+> 블로그 내용을 참고해서 EC2보다는 S3로 배포하게 되었음
+
+<br />
+
 ### Use ( Zero Install )
 
 `Yarn dev`
