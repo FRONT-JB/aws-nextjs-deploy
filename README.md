@@ -181,7 +181,7 @@ module.exports = {
 2. 엑세스 관리 -> 사용자
 3. 사용자 -> 사용자 추가
 4. 사용자 이름 추가 -> 액세스키, 프로그래밍 방식 액세스 체크 -> 다음
-5. 기존 정책 직접 연결 -> 정책 필터 검색 -> S3FullAccess, CloudFrontFullAccess 체크
+5. 기존 정책 직접 연결 -> 정책 필터 검색 -> **S3FullAccess**, **CloudFrontFullAccess** 체크
 
 <br />
 
