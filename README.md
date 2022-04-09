@@ -1,12 +1,12 @@
 # NextJS & YarnBerry & Tailwind
 
-_[S3와 EC2 배포의 차이점](https://devlog-h.tistory.com/m/11)_
+**_[S3와 EC2 배포의 차이점](https://devlog-h.tistory.com/m/11)_**
 
 > 블로그 내용을 참고해서 EC2보다는 S3로 배포하게 되었음
 
 <br />
 
-_[Yarn Berry?](https://toss.tech/article/node-modules-and-yarn-berry)_
+**_[Yarn Berry?](https://toss.tech/article/node-modules-and-yarn-berry)_**
 
 > YarnBerry Zero Install을 사용하니 Github Actions 단계에서 Dependency Install 을 할 필요가 없어졌음.
 > 
@@ -14,7 +14,7 @@ _[Yarn Berry?](https://toss.tech/article/node-modules-and-yarn-berry)_
 
 <br />
 
-_Toss Tech Blog ( Zero Install 장점 )_
+**_Toss Tech Blog ( Zero Install 장점 )_**
 
 ![image](https://user-images.githubusercontent.com/85790271/162581953-126f36f0-b992-42c9-b8a9-1f78d7510904.png)
 
