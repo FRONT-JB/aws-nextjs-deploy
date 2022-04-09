@@ -1,5 +1,11 @@
 # Next.JS
 
+### Use ( Zero Install )
+
+`Yarn dev`
+
+<br />
+
 ### Yarn Berry
 
 `yarn create next-app —typescript`
