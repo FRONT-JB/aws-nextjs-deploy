@@ -217,8 +217,9 @@ module.exports = {
           - name: Checkout source code.
             uses: actions/checkout@v2 # Source를 checkout해서 가져오고
 
-          - name: Install Dependencies
-            run: yarn # yarn scripts 실행 및 dependency 설치
+          # - name: Install Dependencies
+          # run: yarn # yarn scripts 실행 및 dependency 설치
+          # 현재 ZeroInstall 사용중이라 Dependency들을 설치할 필요없음 ( 배포시간 감소 )
 
           - name: Build
             run: yarn build # yarn build scripts 실행 및 export 실행
