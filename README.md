@@ -191,6 +191,26 @@ module.exports = {
 
 <br />
 
+**`package.json 수정`**
+
+     "scripts": {
+        "dev": "next dev",
+        "build": "next build && next export",
+        "start": "next start",
+        "lint": "next lint"
+      },
+
+> **버킷에 업로드할 next빌드 결과물이 필요하기 때문에 build scripts 수정**
+> 
+> **next export 실행시 React Build 결과물 처럼 dist(next out) 폴더가 생성된다.**
+>
+> 생성된 **out** 폴더는 **Github Action에서 배포할때** 업로드할 폴더경로로 선택된다.
+
+    - name: Deploy to S3
+        run: aws s3 sync ./out s3://${{ secrets.DEV_AWS_S3_BUCKET }} --delete
+
+<br />
+
 **`Github Secret 생성`**
 
 - **AWS_ACCESS_KEY_ID**: 배포를 위해 이번에 생성한 IAM 유저의 Access key ID
