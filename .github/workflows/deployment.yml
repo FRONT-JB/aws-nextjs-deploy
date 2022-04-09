@@ -1,38 +1,38 @@
 name: MASTER DEPLOYMENT
 
 on:
-  pull_request:
+  pull_request: # Pull Request가 발생했을 때
     branches:
-      - master
-    types: [closed]
+      - master # 타겟 브랜치 ( develop, etc.. )
+    types: [closed] # 타겟 브랜치에 Pull Request가 Closed 되면 아래의 jobs 실행
 
 jobs:
   deploy:
-    if: github.event.pull_request.merged == true
+    if: github.event.pull_request.merged == true # Pull Request가 Merge 됐을때
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-versions: [14.x]
+        node-versions: [16.x] # Node Version
 
     steps:
       - name: Checkout source code.
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2 # Source를 checkout해서 가져오고
 
-      - name: Install Dependencies
-        run: yarn
+      # - name: Install Dependencies
+      # run: yarn # yarn scripts 실행 및 dependency 설치
 
       - name: Build
-        run: yarn build
+        run: yarn build # yarn build scripts 실행 및 export 실행
 
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v1 # AWS Credential 확인 ( Github Secret에 저장된 정보로 )
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ secrets.AWS_REGION }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }} # Github Secret에 저장된 Access Key
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }} # Github Secret에 저장된 Secret Access Key
+          aws-region: ${{ secrets.AWS_REGION }} # Github Secret에 저장된 Region
 
       - name: Deploy to S3
-        run: aws s3 sync ./out s3://${{ secrets.DEV_AWS_S3_BUCKET }} --delete
+        run: aws s3 sync ./out s3://${{ secrets.DEV_AWS_S3_BUCKET }} --delete # Build 실행 후 생성된 out폴더를 S3에 배포 (--delete 옵션 추가)
 
-      - name: Invalidate CloudFront Cache
+      - name: Invalidate CloudFront Cache # CloudFront에 캐시를 갱신하기 위해 invalidation 실행
         run: aws cloudfront create-invalidation --distribution-id ${{secrets.DEV_AWS_DISTRIBUTION_ID}} --paths "/*"
