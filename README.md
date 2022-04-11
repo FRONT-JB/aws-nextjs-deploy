@@ -26,7 +26,7 @@
 
 <br />
 
-### Yarn Berry
+### Setup
 
 `yarn create next-app —typescript`
 
@@ -41,6 +41,36 @@
 `yarn`
 
 `yarn dev`
+
+<br />
+
+### Build
+
+    scripts: {
+      "dev": "next dev",
+      "build": "next build && next export",
+      "start": "next start",
+      "lint": "next lint",
+    }
+    
+<br />
+
+> **`Error: Image Optimization using Next.js' default loader is not compatible with next export`** 에러가 발생하는 경우
+
+```js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  // 아래의 Config 추가
+  images: {
+    loader: 'akamai',
+    path: '/'
+  }
+}
+
+module.exports = nextConfig
+
+```
 
 ---
 
